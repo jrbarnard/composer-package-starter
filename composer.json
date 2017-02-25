@@ -1,0 +1,35 @@
+{
+    "name": "jrbarnard/-----",
+    "description": "-----",
+    "license": "MIT",
+    "keywords": ["----", "----"],
+    "homepage": "https://github.com/jrbarnard/-----",
+    "authors": [
+        {
+            "name": "James Barnard",
+            "email": "james.r.barnard@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7",
+        "phpdocumentor/phpdocumentor": "^2.8",
+        "squizlabs/php_codesniffer": "2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "tests/TestCase.php"
+        ],
+        "psr-4": {
+            "JRBarnard\\-----\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --colors=always",
+        "test:cov": "phpunit --coverage-html ./tests/report",
+        "test:style": "./vendor/bin/phpcs --standard=PSR2 src",
+        "docs": "./vendor/bin/phpdoc -d ./src -t ./docs"
+    }
+}
